@@ -13,6 +13,27 @@
     line-height: 1.2;
 }
 
+@media screen and (max-width: 768px) {
+    .page-logo {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .page-logo {
+        margin-right: 88px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .page-logo {
+        margin-right: 93px;
+    }
+}
+
 .team-svg {
     fill: currentColor;
 }

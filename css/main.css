@@ -35,11 +35,28 @@ address {
 }
 
 .container {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 0 15px;
+  width: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -172,6 +189,24 @@ address {
   line-height: 1.2;
 }
 
+@media screen and (max-width: 768px) {
+  .page-logo {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page-logo {
+    margin-right: 88px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-logo {
+    margin-right: 93px;
+  }
+}
 .team-svg {
   fill: currentColor;
 }
