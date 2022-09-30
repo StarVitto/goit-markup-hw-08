@@ -1,113 +1,69 @@
 .button {
-    font-family: 'Roboto';
-    cursor: pointer;
-    border: 1px solid transparent;
     display: block;
-    font-size: 16px;
-    text-align: center;
-    font-weight: 500;
+    cursor: pointer;
     margin: 0 auto;
+
+    border: 1px solid transparent;
+
+    font-family: 'Roboto';
+    @include font(16px, 500, 30px);
+
+    text-align: center;
+
     box-sizing: border-box;
 }
 
-.button.secodary {
-    color: var(--primari-text-color);
-    background-color: var(--background);
-    padding: 6px 22px;
-    line-height: 1.6;
-    letter-spacing: 0.03em;
-    border-radius: 4px;
-    border: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
+.hero__primary {
     color: var(--primary-bg-color);
     background-color: var(--accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);}
-}
-
-.button-secodary {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.button.btn {
-    padding: 6px 25px;
-}
-
-.btn-secodary:not(:last-child) {
-    margin: 0 8px 0 0;
-}
-
-.button.primary {
-    color: var(--primary-bg-color);
-    background-color: var(--accent-color);
-    min-width: 216px;
     padding: 10px 32px;
+
     font-weight: 700;
     line-height: 1.88;
+
     display: flex;
     border-radius: 4px;
-    text-align: center;
     align-items: center;
+    text-align: center;
     letter-spacing: 0.06em;
     border: none;
     justify-content: center;
+
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:hover,
-  &:focus {
-    background: var(--buttun);
-    box-shadow: 0 4px 4px rgb(0, 0, 0, 0.15);}
+
+    &:hover,
+    &:focus {
+        background-color: var(--buttun);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
 }
 
-.button-mail {
+.modal__button {
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    padding: 10px 28px;
-    margin-left: 12px;
-    color: #ffffff;
-    background: #2196f3;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
-    border-radius: 4px;
-    border: none;
-}
-
-.svg-btn {
-    margin-left: 10px;
-}
-
-.button-modal {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
+    @include font(16px, 700, 30px);
     padding: 10px 52px;
+    cursor: pointer;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
     letter-spacing: 0.06em;
-    margin: 0 164px;
+
+    margin: 0 auto;
+
     color: var(--team-text--background);
+
     background: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
-  &:hover {
-    background: var(--buttun);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;}
+
+    &:hover,
+    &:focus {
+        background: var(--buttun);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+    }
 }
