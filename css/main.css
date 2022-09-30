@@ -50,11 +50,15 @@ address {
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 .section {
@@ -205,6 +209,9 @@ address {
 @media screen and (min-width: 1200px) {
   .page-logo {
     margin-right: 93px;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
   }
 }
 .team-svg {
@@ -444,12 +451,40 @@ label {
   margin-left: auto;
   margin-right: auto;
   outline: 1px solid var(--outline--background-color);
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(".././images/mobile/hero@2x.jpg");
+  }
+}
+@media screen and (min-width: 768px) {
+  .overlay {
+    max-width: 768px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(".././images/tablet/hero-tablet.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(".././images/tablet/hero-tablet@2x.jpg");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .overlay {
+    max-width: 1600px;
+    height: 600px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(".././images/desktop/hero-desktop.jpg");
+  }
+}
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+  .overlay {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(".././images/desktop/hero-desktop@2x.jpg");
+  }
+}
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -557,6 +592,11 @@ label {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   padding: 15px 295px 15px 16px;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
 }
 
 .page-header {
@@ -1011,4 +1051,140 @@ label {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@media screen and (max-width: 1199px) {
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+.mobile__menu {
+  position: fixed;
+  flex-direction: column;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--team-text--background);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close__icon {
+  width: 40px;
+  height: 40px;
+  color: currentColor;
+}
+
+.mobile__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 40px;
+  width: 100%;
+  height: 100%;
+}
+
+.mobile__box {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.close__menu {
+  position: absolute;
+  display: block;
+  top: 10px;
+  right: 15px;
+  padding: 0;
+  line-height: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.mobile__menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile__list {
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+  }
+  .mobile__list .nav__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  .link.current {
+    color: var(--accent-color);
+  }
+  .mobile-contact__list {
+    font-size: 34px;
+    font-weight: 500;
+    line-height: 1.1764705882;
+    letter-spacing: 0.02em;
+    margin-top: auto;
+    margin-bottom: 64px;
+    color: var(--accent-color);
+  }
+  .mobile__item:not(:last-child) {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  .mobile-contact__link {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.1666666667;
+    letter-spacing: 0.02em;
+    color: var(--title-text-color);
+  }
+  .mobile__socials {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2222222222;
+    letter-spacing: 0.02em;
+    color: var(--accent-color);
+  }
+}
+@media screen and (max-width: 460px) {
+  .mobile__list {
+    font-size: 8.9vw;
+  }
+  .mobile-contact__list {
+    font-size: 7.4vw;
+  }
+  .mobile-contact__link {
+    font-size: 5.22vw;
+  }
+  .mobile__socials {
+    font-size: 3.9vw;
+    padding-bottom: 10px;
+  }
+  .mobile__item {
+    padding: 10px;
+  }
 }/*# sourceMappingURL=main.css.map */
