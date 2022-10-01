@@ -28,12 +28,9 @@
 
 .burger__icon {
      
-        width: 1em;
-        height: 1em;
-        stroke-width: 0;
-        stroke: currentColor;
-        fill: var(--accent-color-logo);
-        transition: var(--transition-function)
+        width: 24px;
+        height: 16px;
+        color: currentColor;
     }
     
     .icon-menu {

@@ -37,10 +37,11 @@
 
     .mobile__socials {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         font-family: 'Roboto';
         font-style: normal;
+        margin-right: 10px;
+        flex-wrap: wrap;
 
         @include font(18px, 500, 22px);
         letter-spacing: 0.02em;
@@ -49,7 +50,7 @@
     }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
     .mobile__list {
         font-size: 8.9vw;
     }
@@ -68,6 +69,6 @@
     }
 
     .mobile__item {
-        padding: 10px;
-    }
+        padding: 10px;}
+                
 }
