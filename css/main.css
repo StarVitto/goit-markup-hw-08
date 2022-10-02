@@ -409,7 +409,9 @@ img {
     font-style: normal;
     margin-right: 10px;
     flex-wrap: wrap;
-    font-size: 12px;
+    font-size: 15px;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 18px;
     font-weight: 500;
     line-height: 1.2222222222;
@@ -432,7 +434,7 @@ img {
     padding-bottom: 10px;
   }
   .mobile__item {
-    padding: 2px;
+    padding: 4px;
     font-size: 11px;
   }
 }
@@ -1141,6 +1143,8 @@ img {
 @media screen and (min-width: 320px) {
   .footer__socials {
     margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
